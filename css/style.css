@@ -1895,10 +1895,12 @@ body {
   margin: 0;
   padding: 0;
   position: relative; /* Required for the pseudo-elements */
-  overflow: hidden; /* Prevents elements from spilling over */
+  overflow: auto; /* Ensure the page scrolls */
+  height: 100%; /* Ensure the body occupies the full height */
+  display: block; /* Ensures the content is displayed correctly */
 }
 
-/* Subtle gradient background effect with lighter gradient */
+/* Subtle gradient background effect */
 body::before {
   content: '';
   position: absolute;
@@ -1929,6 +1931,7 @@ body::after {
 @media (max-width: 768px) {
   body {
     background-color: white; /* Ensure background stays white on mobile */
+    overflow-y: scroll; /* Ensure scrolling is enabled */
   }
 
   body::before {
