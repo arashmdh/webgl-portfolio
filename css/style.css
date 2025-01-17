@@ -1090,7 +1090,7 @@ textarea.w-select {
   background-color: rgba(255, 255, 255, 0.4);
   cursor: pointer;
   margin: 0 3px 0.5em;
-  transition: background-color 0.1s, color 0.1s;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 .w-slider-dot.w-active {
   background-color: #fff;
@@ -1887,7 +1887,20 @@ h5 {
     #572676,
     #1d2671
   );
+  background-size: cover; /* Ensure the gradient covers the viewport */
+  background-position: center; /* Center the gradient */
+  background-attachment: scroll; /* Prevent fixed issues on mobile */
+  height: 100vh; /* Ensure it spans the full viewport height */
+  min-height: 100vh; /* Prevent collapsing on small content */
 }
+/* Add a media query for mobile-specific adjustments */
+@media (max-width: 768px) {
+  .body {
+    background-attachment: scroll; /* Use scroll to avoid mobile issues */
+    background-size: cover; /* Ensure consistency across devices */
+  }
+}
+
 .load {
   position: fixed;
   left: 0;
@@ -2040,12 +2053,13 @@ h5 {
   clear: both;
 }
 .h-head {
-  padding-top: 0.5vw;
-  padding-right: 1vw;
-  padding-left: 3.4vw;
-  font-size: 8vw;
-  line-height: 10vw;
-  font-weight: 300;
+  padding-top: 0.5vw; /* Top padding */
+  padding-right: 20vw; /* Right padding */
+  padding-left: 0.4vw; /* Left padding */
+  padding-bottom: 0.5vw; /* Bottom padding */
+  font-size: 120px;
+  line-height: 1.2; /* Maintain consistent spacing between lines */
+  font-weight: 300; /* Light font weight */
 }
 .h-row {
   margin-bottom: 1vw;
@@ -2503,6 +2517,7 @@ h5 {
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
+  
 }
 .a-logo {
   width: 55vw;
@@ -2512,12 +2527,14 @@ h5 {
   width: 71vw;
 }
 .img {
-  width: 100%;
+  
+  width: auto;
   height: 100%;
+  padding-top: 120px; /* Adds padding to the top */
   background-image: url(../profile.jpg);
   /* background-image: url("https://uploads-ssl.webflow.com/5ea69b4027484b2df2b45806/5ecff93e023f667e859baf70_profile.jpg"); */
   background-position: 50% 50%;
-  background-size: cover;
+ 
   background-repeat: no-repeat;
 }
 .a-img-w {
@@ -6156,6 +6173,7 @@ html.w-mod-js [data-ix="text-0-2"] {
   }
   .a-block {
     margin-bottom: 1vw;
+    padding-bottom: 100cm;
   }
   .a-quote {
     width: 78vw;
