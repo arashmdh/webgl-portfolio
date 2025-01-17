@@ -1893,13 +1893,6 @@ h5 {
   height: 100vh; /* Ensure it spans the full viewport height */
   min-height: 100vh; /* Prevent collapsing on small content */
 }
-/* Add a media query for mobile-specific adjustments */
-@media (max-width: 768px) {
-  .body {
-    background-attachment: scroll; /* Use scroll to avoid mobile issues */
-    background-size: cover; /* Ensure consistency across devices */
-  }
-}
 
 .load {
   position: fixed;
@@ -2526,10 +2519,8 @@ h5 {
   width: 71vw;
 }
 .img {
-  
-  width: auto;
+  width: 100%;
   height: 100%;
-  padding-top: 120px; /* Adds padding to the top */
   background-image: url(../profile.jpg);
   /* background-image: url("https://uploads-ssl.webflow.com/5ea69b4027484b2df2b45806/5ecff93e023f667e859baf70_profile.jpg"); */
   background-position: 50% 50%;
