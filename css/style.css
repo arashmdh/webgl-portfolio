@@ -2517,7 +2517,6 @@ h5 {
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
-  
 }
 .a-logo {
   width: 55vw;
@@ -2534,7 +2533,7 @@ h5 {
   background-image: url(../profile.jpg);
   /* background-image: url("https://uploads-ssl.webflow.com/5ea69b4027484b2df2b45806/5ecff93e023f667e859baf70_profile.jpg"); */
   background-position: 50% 50%;
- 
+  background-size: cover;
   background-repeat: no-repeat;
 }
 .a-img-w {
@@ -4888,13 +4887,6 @@ html.w-mod-js [data-ix="text-0-1"],
 html.w-mod-js [data-ix="text-0-2"] {
   display: none;
 }
-
-.name-with-padding {
-  padding-bottom: 2cm; /* Adds 2cm padding after 'Mamdouh' */
-}
-
-
-
 @media screen and (min-width: 1280px) {
   .html-embed-4 {
     display: none;
@@ -6180,7 +6172,6 @@ html.w-mod-js [data-ix="text-0-2"] {
   }
   .a-block {
     margin-bottom: 1vw;
-    padding-bottom: 100cm;
   }
   .a-quote {
     width: 78vw;
