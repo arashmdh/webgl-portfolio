@@ -1887,13 +1887,7 @@ h5 {
     #572676,
     #1d2671
   );
-  background-size: cover; /* Ensure the gradient covers the viewport */
-  background-position: center; /* Center the gradient */
-  background-attachment: scroll; /* Prevent fixed issues on mobile */
-  height: 100vh; /* Ensure it spans the full viewport height */
-  min-height: 100vh; /* Prevent collapsing on small content */
 }
-
 .load {
   position: fixed;
   left: 0;
