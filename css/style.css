@@ -1891,15 +1891,53 @@ h5 {
   font-weight: 400;
 }
 body {
-  background-color: white; /* Set background color to white */
+  background-color: white; /* Base white background */
   margin: 0;
   padding: 0;
+  position: relative; /* Required for the pseudo-elements */
+  overflow: hidden; /* Prevents elements from spilling over */
 }
 
-/* For mobile devices */
+/* Subtle gradient background effect with lighter gradient */
+body::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.9); /* Lighter opacity for the gradient */
+  background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.1) 25%, rgba(0, 0, 0, 0.2) 50%, rgba(0, 0, 0, 0.1) 75%);
+  pointer-events: none; /* Prevents interaction with this overlay */
+  z-index: -1; /* Places it behind the content */
+}
+
+/* Larger transparent lines effect */
+body::after {
+  content: '';
+  position: absolute;
+  top: 10%;
+  left: 0;
+  width: 100%;
+  height: 80%;
+  background-image: repeating-linear-gradient(45deg, transparent, transparent 20px, rgba(0, 0, 0, 0.2) 20px, rgba(0, 0, 0, 0.2) 40px); /* Larger and more visible lines */
+  pointer-events: none;
+  z-index: -2;
+}
+
+/* Mobile view adjustments */
 @media (max-width: 768px) {
   body {
-    background-color: white; /* Ensure background is white on mobile too */
+    background-color: white; /* Ensure background stays white on mobile */
+  }
+
+  body::before {
+    background: rgba(255, 255, 255, 0.95); /* Lighter opacity on smaller screens for better readability */
+    background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.1) 25%, rgba(0, 0, 0, 0.15) 50%, rgba(0, 0, 0, 0.1) 75%);
+  }
+
+  body::after {
+    background-image: repeating-linear-gradient(45deg, transparent, transparent 15px, rgba(0, 0, 0, 0.3) 15px, rgba(0, 0, 0, 0.3) 30px); /* Larger lines for mobile */
   }
 }
 
