@@ -1890,7 +1890,7 @@ h5 {
   line-height: 2vw;
   font-weight: 400;
 }
-.body {
+body {
   background-image: linear-gradient(
     to right top,
     #c33764,
@@ -1899,7 +1899,27 @@ h5 {
     #572676,
     #1d2671
   );
+  background-size: cover; /* Ensures the gradient covers the entire screen */
+  background-position: center; /* Keeps the gradient centered */
+  background-attachment: fixed; /* Keeps the background fixed during scroll */
+  margin: 0;
+  padding: 0;
 }
+
+/* For mobile devices */
+@media (max-width: 768px) {
+  body {
+    background-image: linear-gradient(
+      to right top,
+      #c33764,
+      #a62a6f,
+      #822675
+    );
+    background-size: cover; /* Ensures the gradient covers the entire screen */
+    background-position: center;
+  }
+}
+
 .load {
   position: fixed;
   left: 0;
