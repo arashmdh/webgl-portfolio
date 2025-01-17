@@ -1446,6 +1446,18 @@ textarea.w-select {
 .w-lightbox-noscroll {
   overflow: hidden;
 }
+
+.name-with-padding {
+  padding-bottom: 90px; /* Adds padding after 'Mamdouh' for normal view */
+}
+
+/* Media query for responsive design */
+@media (max-width: 768px) { /* You can adjust the max-width as needed */
+  .name-with-padding {
+    padding-bottom: 35px; /* Reduces padding after 'Mamdouh' for smaller screens */
+  }
+}
+
 @media (min-width: 768px) {
   .w-lightbox-content {
     height: 96vh;
